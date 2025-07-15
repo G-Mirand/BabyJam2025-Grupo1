@@ -4,6 +4,7 @@ public class ObjetoDestruivel : MonoBehaviour
 {
     public Sprite spriteArranhado;
     public Sprite spriteMordido;
+    public Sprite spriteRegado; 
 
     private SpriteRenderer sr;
 
@@ -21,6 +22,10 @@ public class ObjetoDestruivel : MonoBehaviour
         else if (tipo == "Morder" && spriteMordido != null)
         {
             sr.sprite = spriteMordido;
+        }
+        else if (tipo == "Regando" && spriteRegado != null) 
+        {
+            sr.sprite = spriteRegado;
         }
     }
 }
