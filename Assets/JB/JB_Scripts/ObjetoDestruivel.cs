@@ -1,10 +1,21 @@
 using UnityEngine;
+using System.Collections;
 
 public class ObjetoDestruivel : MonoBehaviour
 {
     public Sprite spriteArranhado;
     public Sprite spriteMordido;
-    public Sprite spriteRegado; 
+    public Sprite spriteRegado;
+
+    public int golpesParaArranhar = 3;
+    public int golpesParaMorder = 3;
+    public int golpesParaRegar = 1;
+
+    private int contadorArranhar = 0;
+    private int contadorMorder = 0;
+    private int contadorRegar = 0;
+
+    private bool foiDestruido = false;
 
     private SpriteRenderer sr;
 
@@ -15,17 +26,57 @@ public class ObjetoDestruivel : MonoBehaviour
 
     public void Destruir(string tipo)
     {
-        if (tipo == "Arranhar" && spriteArranhado != null)
+        if (foiDestruido) return;
+
+        StartCoroutine(Tremor(0.2f, 0.05f)); // tremor ao ser atacado
+
+        switch (tipo)
         {
-            sr.sprite = spriteArranhado;
+            case "Arranhar":
+                contadorArranhar++;
+                if (contadorArranhar >= golpesParaArranhar && spriteArranhado != null)
+                {
+                    sr.sprite = spriteArranhado;
+                    foiDestruido = true;
+                }
+                break;
+
+            case "Morder":
+                contadorMorder++;
+                if (contadorMorder >= golpesParaMorder && spriteMordido != null)
+                {
+                    sr.sprite = spriteMordido;
+                    foiDestruido = true;
+                }
+                break;
+
+            case "Regando":
+                contadorRegar++;
+                if (contadorRegar >= golpesParaRegar && spriteRegado != null)
+                {
+                    sr.sprite = spriteRegado;
+                    foiDestruido = true;
+                }
+                break;
         }
-        else if (tipo == "Morder" && spriteMordido != null)
+    }
+
+    IEnumerator Tremor(float duracao, float intensidade)
+    {
+        Vector3 posicaoOriginal = transform.localPosition;
+        float tempo = 0f;
+
+        while (tempo < duracao)
         {
-            sr.sprite = spriteMordido;
+            float offsetX = Random.Range(-1f, 1f) * intensidade;
+            float offsetY = Random.Range(-1f, 1f) * intensidade;
+
+            transform.localPosition = posicaoOriginal + new Vector3(offsetX, offsetY, 0f);
+
+            tempo += Time.deltaTime;
+            yield return null; // espera o próximo frame
         }
-        else if (tipo == "Regando" && spriteRegado != null) 
-        {
-            sr.sprite = spriteRegado;
-        }
+
+        transform.localPosition = posicaoOriginal;
     }
 }
