@@ -1,29 +1,34 @@
 using UnityEngine;
 
-public class CameraSeguindo: MonoBehaviour
+// Script que faz a câmera seguir o jogador com limites de movimento
+public class CameraSeguindo : MonoBehaviour
 {
-    public Transform player;       // Referência ao player
-    public Vector2 minPos;         // Limite mínimo (x e y)
-    public Vector2 maxPos;         // Limite máximo (x e y)
+    public Transform player;       // Referência ao Transform do jogador (arraste no Inspector)
+    public Vector2 minPos;         // Posição mínima que a câmera pode alcançar (x e y)
+    public Vector2 maxPos;         // Posição máxima que a câmera pode alcançar (x e y)
 
-    private Vector3 offset;        // Distância inicial entre câmera e player
+    private Vector3 offset;        // Distância inicial entre a câmera e o jogador
 
     void Start()
     {
-        // Calcula o offset inicial entre a câmera e o player
+        // Calcula a diferença de posição entre a câmera e o jogador no início
+        // Assim a câmera sempre manterá essa mesma distância (offset) do jogador
         offset = transform.position - player.position;
     }
 
     void LateUpdate()
     {
-        // Posição desejada da câmera baseada na posição do player + offset
+        // Calcula a posição desejada da câmera com base na posição do jogador e no offset
         Vector3 desiredPosition = player.position + offset;
 
-        // Aplica limites
+        // Garante que a posição X desejada da câmera não ultrapasse os limites definidos
         float clampX = Mathf.Clamp(desiredPosition.x, minPos.x, maxPos.x);
+
+        // Garante que a posição Y desejada da câmera não ultrapasse os limites definidos
         float clampY = Mathf.Clamp(desiredPosition.y, minPos.y, maxPos.y);
 
-        // Atualiza posição da câmera com limites
+        // Atualiza a posição da câmera com os valores limitados
+        // O valor de Z é mantido igual para não alterar a profundidade da câmera
         transform.position = new Vector3(clampX, clampY, transform.position.z);
     }
 }
