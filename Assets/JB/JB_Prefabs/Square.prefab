@@ -181,3 +181,7 @@ MonoBehaviour:
   golpesParaArranhar: 3
   golpesParaMorder: 3
   golpesParaRegar: 1
+  aceitaArranhar: 1
+  aceitaMorder: 1
+  aceitaRegar: 1
+  gerenciador: {fileID: 0}
