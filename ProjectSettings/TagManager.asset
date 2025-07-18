@@ -42,11 +42,38 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Tapete
+    uniqueID: 3470157607
+    locked: 0
+  - name: Mesa
+    uniqueID: 1963219587
+    locked: 0
+  - name: Vaso
+    uniqueID: 2687920055
+    locked: 0
+  - name: Estante1
+    uniqueID: 3965930067
+    locked: 0
+  - name: Estante2
+    uniqueID: 4129481753
+    locked: 0
+  - name: Poltrona
+    uniqueID: 2023173905
+    locked: 0
+  - name: TV
+    uniqueID: 221996781
+    locked: 0
+  - name: Sofa
+    uniqueID: 3707488381
+    locked: 0
+  - name: Quadro
+    uniqueID: 2337888803
+    locked: 0
+  - name: Porta
+    uniqueID: 3640725395
+    locked: 0
   - name: Dog
     uniqueID: 4288792185
-    locked: 0
-  - name: Colisor
-    uniqueID: 3965930067
     locked: 0
   m_RenderingLayers:
   - Default

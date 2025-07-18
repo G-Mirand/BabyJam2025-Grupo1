@@ -5,27 +5,38 @@ public class GerenciadorDeObjetos : MonoBehaviour
 {
     [Tooltip("Lista de todos os objetos destruíveis do cômodo")]
     public List<ObjetoDestruivel> objetosDestruiveis;
-    // Lista de todos os objetos que o jogador pode destruir. Cada vez que um deles é destruído, ele é removido da lista.
 
+    [Header("Porta")]
     [Tooltip("Sprite da porta fechada")]
     public Sprite spritePortaFechada;
-    // Sprite usado para mostrar a porta fechada no início da cena.
 
     [Tooltip("Sprite da porta aberta")]
     public Sprite spritePortaAberta;
-    // Sprite que será exibido quando todos os objetos forem destruídos (porta "abrindo").
 
     [Tooltip("Referência ao SpriteRenderer da porta")]
     public SpriteRenderer portaSpriteRenderer;
-    // Referência ao componente SpriteRenderer da porta (para trocar visualmente o sprite quando necessário).
+
+    [Header("Quadro")]
+    [Tooltip("Sprite do quadro intacto")]
+    public Sprite spriteQuadroIntacto;
+
+    [Tooltip("Sprite do quadro destruído")]
+    public Sprite spriteQuadroDestruido;
+
+    [Tooltip("Referência ao SpriteRenderer do quadro")]
+    public SpriteRenderer quadroSpriteRenderer;
 
     void Start()
     {
-        // Começa com a porta fechada
+        // Começa com a porta fechada e quadro intacto
         if (portaSpriteRenderer != null && spritePortaFechada != null)
         {
             portaSpriteRenderer.sprite = spritePortaFechada;
-            // No início do jogo, a porta é fechada visualmente
+        }
+
+        if (quadroSpriteRenderer != null && spriteQuadroIntacto != null)
+        {
+            quadroSpriteRenderer.sprite = spriteQuadroIntacto;
         }
     }
 
@@ -36,24 +47,27 @@ public class GerenciadorDeObjetos : MonoBehaviour
         {
             objetosDestruiveis.Remove(obj);
             Debug.Log("Objeto destruído: " + obj.name);
-            // O objeto é removido da lista. Assim, o sistema sabe quantos ainda restam.
 
-            // Se todos os objetos da lista foram destruídos, abre a porta
             if (objetosDestruiveis.Count == 0)
             {
-                AbrirPorta();
+                AbrirPortaEQuebrarQuadro();
             }
         }
     }
 
-    // Método que muda o sprite da porta para a versão aberta
-    void AbrirPorta()
+    // Porta abre e quadro muda para destruído
+    void AbrirPortaEQuebrarQuadro()
     {
-        Debug.Log("Todos os objetos destruídos! Porta aberta.");
+        Debug.Log("Todos os objetos destruídos! Porta aberta e quadro quebrado.");
+
         if (portaSpriteRenderer != null && spritePortaAberta != null)
         {
             portaSpriteRenderer.sprite = spritePortaAberta;
-            // A porta muda visualmente para aberta
+        }
+
+        if (quadroSpriteRenderer != null && spriteQuadroDestruido != null)
+        {
+            quadroSpriteRenderer.sprite = spriteQuadroDestruido;
         }
     }
 }

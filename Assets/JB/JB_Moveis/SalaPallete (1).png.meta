@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: 6b37d586b992f1046a3c010706110edc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3320052193916220905
+    second: SalaPallete (1)_0
+  - first:
+      213: 4783127299445484026
+    second: SalaPallete (1)_1
+  - first:
+      213: -1964758736549248171
+    second: SalaPallete (1)_2
+  - first:
+      213: -4469078998228451021
+    second: SalaPallete (1)_3
+  - first:
+      213: -8035429505531556799
+    second: SalaPallete (1)_4
+  - first:
+      213: 1489658244516518934
+    second: SalaPallete (1)_5
+  - first:
+      213: -9123191446857176715
+    second: SalaPallete (1)_6
+  - first:
+      213: -5780048887236179565
+    second: SalaPallete (1)_7
+  - first:
+      213: 2231366995338898963
+    second: SalaPallete (1)_8
+  - first:
+      213: 2912458147408252915
+    second: SalaPallete (1)_9
+  - first:
+      213: -1841946703595377208
+    second: SalaPallete (1)_10
+  - first:
+      213: -5576382849353640667
+    second: SalaPallete (1)_11
+  - first:
+      213: -5004061731135482224
+    second: SalaPallete (1)_12
+  - first:
+      213: 7098721796698679676
+    second: SalaPallete (1)_13
+  - first:
+      213: 6558234763369824649
+    second: SalaPallete (1)_14
+  - first:
+      213: -345645017786877669
+    second: SalaPallete (1)_15
+  - first:
+      213: -9222684879346725136
+    second: SalaPallete (1)_16
+  - first:
+      213: 4267736758057060909
+    second: SalaPallete (1)_17
+  - first:
+      213: 1778826475730809182
+    second: SalaPallete (1)_18
+  - first:
+      213: -5463910558509718956
+    second: SalaPallete (1)_19
+  - first:
+      213: 2829991700594906444
+    second: SalaPallete (1)_20
+  - first:
+      213: 6563891787089706458
+    second: SalaPallete (1)_21
+  - first:
+      213: 2840789124753311800
+    second: SalaPallete (1)_22
+  - first:
+      213: -7508953324785211293
+    second: SalaPallete (1)_23
+  - first:
+      213: -8302676286373438149
+    second: SalaPallete (1)_24
+  - first:
+      213: 6272060290951003262
+    second: SalaPallete (1)_25
+  - first:
+      213: -7021192116286445226
+    second: SalaPallete (1)_26
+  - first:
+      213: -5129531758898794172
+    second: SalaPallete (1)_27
+  - first:
+      213: 68100242387009359
+    second: SalaPallete (1)_28
+  - first:
+      213: 824424406327397962
+    second: SalaPallete (1)_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SalaPallete (1)_0
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 3632
+        width: 507
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71a0ed9be1ecce1d0800000000000000
+      internalID: -3320052193916220905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_1
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 3623
+        width: 248
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af9ebeecfe4116240800000000000000
+      internalID: 4783127299445484026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_2
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 3898
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55303aeb656cbb4e0800000000000000
+      internalID: -1964758736549248171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_3
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 3633
+        width: 289
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3314f6d4454aaf1c0800000000000000
+      internalID: -4469078998228451021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_4
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 3740
+        width: 722
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c4911307b6c7090800000000000000
+      internalID: -8035429505531556799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_5
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 3690
+        width: 549
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c9325e7445ca410800000000000000
+      internalID: 1489658244516518934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_6
+      rect:
+        serializedVersion: 2
+        x: 3350
+        y: 3698
+        width: 222
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 579223047b9e36180800000000000000
+      internalID: -9123191446857176715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_7
+      rect:
+        serializedVersion: 2
+        x: 3574
+        y: 3683
+        width: 373
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39945eb392429cfa0800000000000000
+      internalID: -5780048887236179565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_8
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 3715
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31ea4b0c57867fe10800000000000000
+      internalID: 2231366995338898963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_9
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 3083
+        width: 332
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ff067311412b6820800000000000000
+      internalID: 2912458147408252915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_10
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 3100
+        width: 348
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cdeefc6b371076e0800000000000000
+      internalID: -1841946703595377208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_11
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 3090
+        width: 57
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52512bce755bc92b0800000000000000
+      internalID: -5576382849353640667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_12
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 2983
+        width: 1472
+        height: 489
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0961b814e500e8ab0800000000000000
+      internalID: -5004061731135482224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_13
+      rect:
+        serializedVersion: 2
+        x: 3091
+        y: 3100
+        width: 207
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c792c8b0dd9b38260800000000000000
+      internalID: 7098721796698679676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_14
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 3116
+        width: 225
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 981c64035c7830b50800000000000000
+      internalID: 6558234763369824649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_15
+      rect:
+        serializedVersion: 2
+        x: 3648
+        y: 3100
+        width: 82
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b19fd6800b5043bf0800000000000000
+      internalID: -345645017786877669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_16
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 2434
+        width: 506
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fe0c2357f0720080800000000000000
+      internalID: -9222684879346725136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_17
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 2459
+        width: 532
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2a4ed258fb0a3b30800000000000000
+      internalID: 4267736758057060909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_18
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 2468
+        width: 232
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e51befa4149afa810800000000000000
+      internalID: 1778826475730809182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_19
+      rect:
+        serializedVersion: 2
+        x: 2001
+        y: 2425
+        width: 406
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 452a58bcb4a4c24b0800000000000000
+      internalID: -5463910558509718956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_20
+      rect:
+        serializedVersion: 2
+        x: 2733
+        y: 2100
+        width: 307
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c45534f2576264720800000000000000
+      internalID: 2829991700594906444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_21
+      rect:
+        serializedVersion: 2
+        x: 3215
+        y: 2110
+        width: 367
+        height: 665
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: addf599adc0a71b50800000000000000
+      internalID: 6563891787089706458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_22
+      rect:
+        serializedVersion: 2
+        x: 3390
+        y: 2718
+        width: 67
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 838c6b668a28c6720800000000000000
+      internalID: 2840789124753311800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_23
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 2418
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36860393cb6dac790800000000000000
+      internalID: -7508953324785211293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_24
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1703
+        width: 264
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3dd6a138e7f6cc80800000000000000
+      internalID: -8302676286373438149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_25
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 1693
+        width: 274
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7cb7f39a95da0750800000000000000
+      internalID: 6272060290951003262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_26
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 1785
+        width: 765
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65929f858f6bf8e90800000000000000
+      internalID: -7021192116286445226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_27
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1110
+        width: 257
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 441b0ceea0e30d8b0800000000000000
+      internalID: -5129531758898794172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_28
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1060
+        width: 257
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4f78944fc0f1f000800000000000000
+      internalID: 68100242387009359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SalaPallete (1)_29
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 1020
+        width: 407
+        height: 465
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e8e4b21a1f07b00800000000000000
+      internalID: 824424406327397962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SalaPallete (1)_0: -3320052193916220905
+      SalaPallete (1)_1: 4783127299445484026
+      SalaPallete (1)_10: -1841946703595377208
+      SalaPallete (1)_11: -5576382849353640667
+      SalaPallete (1)_12: -5004061731135482224
+      SalaPallete (1)_13: 7098721796698679676
+      SalaPallete (1)_14: 6558234763369824649
+      SalaPallete (1)_15: -345645017786877669
+      SalaPallete (1)_16: -9222684879346725136
+      SalaPallete (1)_17: 4267736758057060909
+      SalaPallete (1)_18: 1778826475730809182
+      SalaPallete (1)_19: -5463910558509718956
+      SalaPallete (1)_2: -1964758736549248171
+      SalaPallete (1)_20: 2829991700594906444
+      SalaPallete (1)_21: 6563891787089706458
+      SalaPallete (1)_22: 2840789124753311800
+      SalaPallete (1)_23: -7508953324785211293
+      SalaPallete (1)_24: -8302676286373438149
+      SalaPallete (1)_25: 6272060290951003262
+      SalaPallete (1)_26: -7021192116286445226
+      SalaPallete (1)_27: -5129531758898794172
+      SalaPallete (1)_28: 68100242387009359
+      SalaPallete (1)_29: 824424406327397962
+      SalaPallete (1)_3: -4469078998228451021
+      SalaPallete (1)_4: -8035429505531556799
+      SalaPallete (1)_5: 1489658244516518934
+      SalaPallete (1)_6: -9123191446857176715
+      SalaPallete (1)_7: -5780048887236179565
+      SalaPallete (1)_8: 2231366995338898963
+      SalaPallete (1)_9: 2912458147408252915
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
