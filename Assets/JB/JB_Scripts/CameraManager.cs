@@ -13,11 +13,15 @@ public class CameraManager : MonoBehaviour
     public CinemachineVirtualCameraBase startCamera;
     private CinemachineVirtualCameraBase currentCam;
 
+    private void Awake()
+    {
+        startCamera = sala; // Set the default starting camera
+    }
     private void Start()
     {
+        startCamera = sala; // Set the default starting camera
         currentCam = startCamera;
-
-        SwitchCamera(sala);
+        
 
         for (int i = 0; i < cameras.Length; i++)
         {
