@@ -32,11 +32,17 @@ public class CatAttack : MonoBehaviour
         {
             // Se apertar Z, inicia ataque "Arranhar"
             if (Input.GetKeyDown(KeyCode.Z))
+            {
                 StartCoroutine(Attack("Arranhar"));
+                SoundManager.PlaySound(SoundType.ARRANHAO);
+            }
 
             // Se apertar X, inicia ataque "Morder"
             if (Input.GetKeyDown(KeyCode.X))
+            {
                 StartCoroutine(Attack("Morder"));
+                SoundManager.PlaySound(SoundType.MORDIDA);
+            }
 
             // Se apertar C, inicia ataque "Regar"
             if (Input.GetKeyDown(KeyCode.C))
