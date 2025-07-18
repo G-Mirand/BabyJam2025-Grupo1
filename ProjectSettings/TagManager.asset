@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Colisor
+  - Madeira
+  - Vidro
+  - Tecido
   layers:
   - Default
   - TransparentFX

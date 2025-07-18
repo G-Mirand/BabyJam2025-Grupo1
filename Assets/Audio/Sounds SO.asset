@@ -43,3 +43,18 @@ MonoBehaviour:
     mixer: {fileID: 24300002, guid: 2ed6532f4b4a8d34fbafea2c00bb8c48, type: 2}
     sounds:
     - {fileID: 8300000, guid: b169f8eeca5d8c94c83d84f2c6da7916, type: 3}
+  - name: MADEIRAQUEBRANDO
+    volume: 1
+    mixer: {fileID: 24300002, guid: 2ed6532f4b4a8d34fbafea2c00bb8c48, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 2c2e0df93c5e67940a13451c91eb5d85, type: 3}
+  - name: VIDROQUEBRANDO
+    volume: 1
+    mixer: {fileID: 24300002, guid: 2ed6532f4b4a8d34fbafea2c00bb8c48, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 3f17c2fc3b4caea45bca16f873b1e975, type: 3}
+  - name: TECIDORESGANDO
+    volume: 1
+    mixer: {fileID: 24300002, guid: 2ed6532f4b4a8d34fbafea2c00bb8c48, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 90ce73a555cd23d4296e4f3cf2ac5164, type: 3}

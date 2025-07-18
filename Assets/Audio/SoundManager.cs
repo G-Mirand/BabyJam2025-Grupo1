@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 
 public enum SoundType
-{
+{   
     //Os tipo de som no jogo
     MUSICATRANQUILA,
     PREVIEWMUSICA,
@@ -13,7 +13,9 @@ public enum SoundType
     MORDIDA,
     ARRANHAO,
     REGAR,
-
+    MADEIRAQUEBRANDO,
+    VIDROQUEBRANDO,
+    TECIDORESGANDO,
 }
 
 [RequireComponent(typeof(AudioSource))]

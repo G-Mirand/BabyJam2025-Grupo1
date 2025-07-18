@@ -46,7 +46,10 @@ public class CatAttack : MonoBehaviour
 
             // Se apertar C, inicia ataque "Regar"
             if (Input.GetKeyDown(KeyCode.C))
-                StartCoroutine(Regar()); 
+            {
+                StartCoroutine(Regar());
+                SoundManager.PlaySound(SoundType.REGAR);
+            }
         }
     }
 

@@ -52,6 +52,7 @@ public class ObjetoDestruivel : MonoBehaviour
                 if (contadorArranhar >= golpesParaArranhar && spriteArranhado != null)
                 {
                     sr.sprite = spriteArranhado;
+                    ChecarSom();
                     foiDestruido = true;
                 }
                 break;
@@ -61,6 +62,7 @@ public class ObjetoDestruivel : MonoBehaviour
                 if (contadorMorder >= golpesParaMorder && spriteMordido != null)
                 {
                     sr.sprite = spriteMordido;
+                    ChecarSom();
                     foiDestruido = true;
                 }
                 break;
@@ -70,6 +72,7 @@ public class ObjetoDestruivel : MonoBehaviour
                 if (contadorRegar >= golpesParaRegar && spriteRegado != null)
                 {
                     sr.sprite = spriteRegado;
+                    ChecarSom();
                     foiDestruido = true;
                 }
                 break;
@@ -99,5 +102,21 @@ public class ObjetoDestruivel : MonoBehaviour
         }
 
         transform.localPosition = posicaoOriginal;
+    }
+
+    void ChecarSom()
+    {
+        if(gameObject.tag == "Vidro")
+        {
+             SoundManager.PlaySound(SoundType.VIDROQUEBRANDO);
+        }
+        if(gameObject.tag == "Madeira")
+        {
+            SoundManager.PlaySound(SoundType.MADEIRAQUEBRANDO);
+        }
+        if(gameObject.tag == "Tecido")
+        {
+            SoundManager.PlaySound(SoundType.TECIDORESGANDO);
+        }
     }
 }
