@@ -7,8 +7,8 @@ public class CameraManager : MonoBehaviour
 
     public CinemachineVirtualCameraBase sala;
     public CinemachineVirtualCameraBase quarto;
-    public CinemachineFreeLook cozinha;
-    public CinemachineFreeLook banheiro;
+    public CinemachineVirtualCameraBase cozinha;
+    public CinemachineVirtualCameraBase banheiro;
 
     public CinemachineVirtualCameraBase startCamera;
     private CinemachineVirtualCameraBase currentCam;
@@ -16,6 +16,8 @@ public class CameraManager : MonoBehaviour
     private void Start()
     {
         currentCam = startCamera;
+
+        SwitchCamera(sala);
 
         for (int i = 0; i < cameras.Length; i++)
         {
