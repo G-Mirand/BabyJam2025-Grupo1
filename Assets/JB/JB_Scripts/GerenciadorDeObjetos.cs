@@ -26,6 +26,9 @@ public class GerenciadorDeObjetos : MonoBehaviour
     [Tooltip("Referência ao SpriteRenderer do quadro")]
     public SpriteRenderer quadroSpriteRenderer;
 
+    // Flag interna para saber se a porta está aberta
+    private bool portaAberta = false;
+
     void Start()
     {
         // Começa com a porta fechada e quadro intacto
@@ -69,5 +72,13 @@ public class GerenciadorDeObjetos : MonoBehaviour
         {
             quadroSpriteRenderer.sprite = spriteQuadroDestruido;
         }
+
+        portaAberta = true;
+    }
+
+    // Método público para verificar se a porta está aberta
+    public bool PortaoEstaAberto()
+    {
+        return portaAberta;
     }
 }
