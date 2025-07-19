@@ -54,6 +54,12 @@ public class GerenciadorDeObjetos : MonoBehaviour
             if (objetosDestruiveis.Count == 0)
             {
                 AbrirPortaEQuebrarQuadro();
+
+                // Informa ao GerenciadorDeProgresso que a sala foi concluída
+                if (GerenciadorDeProgresso.instance != null)
+                {
+                    GerenciadorDeProgresso.instance.SalaCompleta();
+                }
             }
         }
     }

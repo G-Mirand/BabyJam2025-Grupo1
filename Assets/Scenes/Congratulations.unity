@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &488423057
+--- !u!1 &58899701
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,9 +127,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 488423060}
-  - component: {fileID: 488423059}
-  - component: {fileID: 488423058}
+  - component: {fileID: 58899704}
+  - component: {fileID: 58899703}
+  - component: {fileID: 58899702}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -137,21 +137,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &488423058
+--- !u!81 &58899702
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488423057}
+  m_GameObject: {fileID: 58899701}
   m_Enabled: 1
---- !u!20 &488423059
+--- !u!20 &58899703
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488423057}
+  m_GameObject: {fileID: 58899701}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -196,13 +196,13 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!4 &488423060
+--- !u!4 &58899704
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488423057}
+  m_GameObject: {fileID: 58899701}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
@@ -211,7 +211,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &6698207870026172978
+--- !u!1001 &1639283987
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -268,7 +268,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2d3b1b5d77b43c40aa15b48477f6692, type: 3}
---- !u!1001 &7634164478271640570
+--- !u!1001 &1839684980
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -279,6 +279,22 @@ PrefabInstance:
     - target: {fileID: 3284038533484724151, guid: d88bddce443dddb4ba239b20addbb406, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933306762674489296, guid: d88bddce443dddb4ba239b20addbb406, type: 3}
+      propertyPath: m_text
+      value: YOU WIN!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933306762674489296, guid: d88bddce443dddb4ba239b20addbb406, type: 3}
+      propertyPath: m_fontSize
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933306762674489296, guid: d88bddce443dddb4ba239b20addbb406, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933306762674489296, guid: d88bddce443dddb4ba239b20addbb406, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 8072690903265292002, guid: d88bddce443dddb4ba239b20addbb406, type: 3}
       propertyPath: m_Pivot.x
@@ -369,6 +385,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 488423060}
-  - {fileID: 7634164478271640570}
-  - {fileID: 6698207870026172978}
+  - {fileID: 58899704}
+  - {fileID: 1839684980}
+  - {fileID: 1639283987}
