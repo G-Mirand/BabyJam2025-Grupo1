@@ -1,10 +1,12 @@
 using UnityEngine;
-using TMPro; 
+using UnityEngine.SceneManagement;
+using TMPro;
+using System.Collections; 
 
-public class TimerController : MonoBehaviour
+public class JP_GamerController : MonoBehaviour
 {
-    public TextMeshProUGUI timeText; 
-    public float timeCount = 30f;    // tempo inicial em segundos
+    public TextMeshProUGUI timeText;
+    public float timeCount = 30f;       // tempo inicial
     private bool timeOver = false;
 
     void Update()
@@ -20,7 +22,21 @@ public class TimerController : MonoBehaviour
         if (timeCount <= 0f)
         {
             timeOver = true;
-            Debug.Log("Tempo acabou!");
+            StartCoroutine(FimDoTempo());  // inicia corrotina
         }
+    }
+
+    // Corrotina que espera 2 segundos e muda de cena
+    IEnumerator FimDoTempo()
+    {
+        Debug.Log("Tempo acabou!");
+
+        // Aqui você pode desativar controles do jogador, se quiser
+        // Por exemplo:
+        // GameObject.FindWithTag("Player").GetComponent<CatMov>().enabled = false;
+
+        yield return new WaitForSeconds(2f);  // espera 2 segundos
+
+        SceneManager.LoadScene("GameOver");   // carrega cena
     }
 }

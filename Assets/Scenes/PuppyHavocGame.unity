@@ -9606,6 +9606,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4880163057367947976, guid: 61e79b509d6e1764c816a9c7918f7ef5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5618458519066781740, guid: 61e79b509d6e1764c816a9c7918f7ef5, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -9633,6 +9637,14 @@ PrefabInstance:
     - target: {fileID: 6583293071240428746, guid: 61e79b509d6e1764c816a9c7918f7ef5, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687482076575597799, guid: 61e79b509d6e1764c816a9c7918f7ef5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 76.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801850857667236324, guid: 61e79b509d6e1764c816a9c7918f7ef5, type: 3}
+      propertyPath: timeCount
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10145,7 +10157,7 @@ Transform:
   m_GameObject: {fileID: 2104553459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.372545, y: -1.6085324, z: -10.450525}
+  m_LocalPosition: {x: 23.342775, y: -1.6088824, z: -10.450525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

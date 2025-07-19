@@ -1,20 +1,18 @@
 using UnityEngine;
-using TMPro;   
+using TMPro;
 
 public class JP_Pontuacao : MonoBehaviour
 {
-    public static JP_Pontuacao instance;   
+    public static JP_Pontuacao instance;
 
-    private int pontos = 0;                // contador interno
-    public TextMeshProUGUI pontosText;     // referência ao texto na cena
+    private int pontos = 0;
+    public TextMeshProUGUI pontosText;
 
     void Awake()
     {
-        // garante só um objeto deste tipo
         if (instance == null)
         {
             instance = this;
-            
         }
         else
         {
@@ -24,12 +22,16 @@ public class JP_Pontuacao : MonoBehaviour
 
     void Start()
     {
-        AtualizarTexto(); 
+        AtualizarTexto();
     }
 
     public void AdicionarPontos(int valor)
     {
         pontos += valor;
+
+        // Salva a pontuação atual no PlayerPrefs
+        PlayerPrefs.SetInt("PontuacaoFinal", pontos);
+
         AtualizarTexto();
     }
 
@@ -39,7 +41,3 @@ public class JP_Pontuacao : MonoBehaviour
             pontosText.text = "Pontos: " + pontos;
     }
 }
-
-
-
-
