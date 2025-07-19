@@ -72,8 +72,23 @@ TagManager:
   - name: Quadro
     uniqueID: 2337888803
     locked: 0
+  - name: Armario
+    uniqueID: 2543194879
+    locked: 0
+  - name: Cama
+    uniqueID: 3896281107
+    locked: 0
+  - name: PC
+    uniqueID: 1906466149
+    locked: 0
+  - name: Espelho
+    uniqueID: 50834097
+    locked: 0
   - name: Porta
     uniqueID: 3640725395
+    locked: 0
+  - name: Devinho
+    uniqueID: 3462987787
     locked: 0
   - name: Dog
     uniqueID: 4288792185

@@ -1,4 +1,3 @@
-// ObjetoDestruivel.cs
 using UnityEngine;
 using System.Collections;
 
@@ -16,16 +15,20 @@ public class ObjetoDestruivel : MonoBehaviour
     public bool aceitaMorder = true;
     public bool aceitaRegar = true;
 
+    public int valorPontuacao = 10; // Pontos recebidos ao destruir
+
     private int contadorArranhar = 0;
     private int contadorMorder = 0;
     private int contadorRegar = 0;
 
     private bool foiDestruido = false;
+    private bool pontuado = false;
 
     private SpriteRenderer sr;
 
-    // Referência para o gerenciador da sala, deve ser atribuída na Unity
-    public GerenciadorDeObjetos gerenciador;
+    // Referências para os gerenciadores (só um será usado)
+    public GerenciadorDeObjetos gerenciadorSala;
+    public GerenciadorDeObjetosQuarto gerenciadorQuarto;
 
     void Start()
     {
@@ -53,6 +56,7 @@ public class ObjetoDestruivel : MonoBehaviour
                 {
                     sr.sprite = spriteArranhado;
                     ChecarSom();
+                    AdicionarPontuacao();
                     foiDestruido = true;
                 }
                 break;
@@ -63,6 +67,7 @@ public class ObjetoDestruivel : MonoBehaviour
                 {
                     sr.sprite = spriteMordido;
                     ChecarSom();
+                    AdicionarPontuacao();
                     foiDestruido = true;
                 }
                 break;
@@ -73,15 +78,28 @@ public class ObjetoDestruivel : MonoBehaviour
                 {
                     sr.sprite = spriteRegado;
                     ChecarSom();
+                    AdicionarPontuacao();
                     foiDestruido = true;
                 }
                 break;
         }
 
-        // Quando for destruído, avisa o gerenciador
-        if (foiDestruido && gerenciador != null)
+        // Avisa o gerenciador correspondente
+        if (foiDestruido)
         {
-            gerenciador.AvisarObjetoDestruido(this);
+            if (gerenciadorSala != null)
+                gerenciadorSala.AvisarObjetoDestruido(this);
+            else if (gerenciadorQuarto != null)
+                gerenciadorQuarto.AvisarObjetoDestruido(this);
+        }
+    }
+
+    void AdicionarPontuacao()
+    {
+        if (!pontuado && JP_Pontuacao.instance != null)
+        {
+            JP_Pontuacao.instance.AdicionarPontos(valorPontuacao);
+            pontuado = true;
         }
     }
 
@@ -106,15 +124,15 @@ public class ObjetoDestruivel : MonoBehaviour
 
     void ChecarSom()
     {
-        if(gameObject.tag == "Vidro")
+        if (CompareTag("Vidro"))
         {
-             SoundManager.PlaySound(SoundType.VIDROQUEBRANDO);
+            SoundManager.PlaySound(SoundType.VIDROQUEBRANDO);
         }
-        if(gameObject.tag == "Madeira")
+        else if (CompareTag("Madeira"))
         {
             SoundManager.PlaySound(SoundType.MADEIRAQUEBRANDO);
         }
-        if(gameObject.tag == "Tecido")
+        else if (CompareTag("Tecido"))
         {
             SoundManager.PlaySound(SoundType.TECIDORESGANDO);
         }

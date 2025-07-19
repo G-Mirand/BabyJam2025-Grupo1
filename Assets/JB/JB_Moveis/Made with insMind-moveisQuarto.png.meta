@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 684a91e1a3338b44b89cff3214a81e29
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8774435638846617060
+    second: Made with insMind-moveisQuarto_0
+  - first:
+      213: 435313239860023668
+    second: Made with insMind-moveisQuarto_1
+  - first:
+      213: 8345109575346832201
+    second: Made with insMind-moveisQuarto_2
+  - first:
+      213: -2288021011240192955
+    second: Made with insMind-moveisQuarto_3
+  - first:
+      213: 309449953633738616
+    second: Made with insMind-moveisQuarto_4
+  - first:
+      213: -7589827090803573072
+    second: Made with insMind-moveisQuarto_5
+  - first:
+      213: 8593935952945989573
+    second: Made with insMind-moveisQuarto_6
+  - first:
+      213: 5977175717577464469
+    second: Made with insMind-moveisQuarto_7
+  - first:
+      213: -6099826147207943686
+    second: Made with insMind-moveisQuarto_8
+  - first:
+      213: 6297204385307409340
+    second: Made with insMind-moveisQuarto_9
+  - first:
+      213: 516132795377017367
+    second: Made with insMind-moveisQuarto_10
+  - first:
+      213: -5610189987849392212
+    second: Made with insMind-moveisQuarto_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 24
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Made with insMind-moveisQuarto_0
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 850
+        width: 117
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e5fafd79be05c970800000000000000
+      internalID: 8774435638846617060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Made with insMind-moveisQuarto_1
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 821
+        width: 152
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47191e3d51b8a0600800000000000000
+      internalID: 435313239860023668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Made with insMind-moveisQuarto_2
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 924
+        width: 110
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 943424ac1f8cfc370800000000000000
+      internalID: 8345109575346832201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Made with insMind-moveisQuarto_3
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 886
+        width: 119
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 544f56243015f30e0800000000000000
+      internalID: -2288021011240192955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Made with insMind-moveisQuarto_4
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 656
+        width: 139
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87f9912e7136b4400800000000000000
+      internalID: 309449953633738616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Made with insMind-moveisQuarto_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 645
+        width: 147
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0be340a39748ba690800000000000000
+      internalID: -7589827090803573072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Made with insMind-moveisQuarto_6
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 733
+        width: 79
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c7cdc1773bc34770800000000000000
+      internalID: 8593935952945989573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Made with insMind-moveisQuarto_7
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 716
+        width: 101
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59a9b4e85a133f250800000000000000
+      internalID: 5977175717577464469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Made with insMind-moveisQuarto_8
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 477
+        width: 62
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af9e708ff60195ba0800000000000000
+      internalID: -6099826147207943686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Made with insMind-moveisQuarto_9
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 475
+        width: 62
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbbb740460a246750800000000000000
+      internalID: 6297204385307409340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Made with insMind-moveisQuarto_10
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 173
+        width: 238
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7126065fa0ca92700800000000000000
+      internalID: 516132795377017367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Made with insMind-moveisQuarto_11
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 173
+        width: 240
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cafa8cb1ee99422b0800000000000000
+      internalID: -5610189987849392212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Made with insMind-moveisQuarto_0: 8774435638846617060
+      Made with insMind-moveisQuarto_1: 435313239860023668
+      Made with insMind-moveisQuarto_10: 516132795377017367
+      Made with insMind-moveisQuarto_11: -5610189987849392212
+      Made with insMind-moveisQuarto_2: 8345109575346832201
+      Made with insMind-moveisQuarto_3: -2288021011240192955
+      Made with insMind-moveisQuarto_4: 309449953633738616
+      Made with insMind-moveisQuarto_5: -7589827090803573072
+      Made with insMind-moveisQuarto_6: 8593935952945989573
+      Made with insMind-moveisQuarto_7: 5977175717577464469
+      Made with insMind-moveisQuarto_8: -6099826147207943686
+      Made with insMind-moveisQuarto_9: 6297204385307409340
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

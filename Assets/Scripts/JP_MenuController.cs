@@ -6,6 +6,8 @@ public class JP_MenuController : MonoBehaviour
     [SerializeField] private string nomeDoLevelDeJogo;
     [SerializeField] private GameObject painelMenuInicial;
     [SerializeField] private GameObject painelOpcoes;
+
+
     public void Jogar()
     {
         SceneManager.LoadScene(nomeDoLevelDeJogo);

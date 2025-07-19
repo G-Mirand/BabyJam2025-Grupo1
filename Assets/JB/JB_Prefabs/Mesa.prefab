@@ -82,7 +82,8 @@ MonoBehaviour:
   aceitaArranhar: 0
   aceitaMorder: 1
   aceitaRegar: 0
-  gerenciador: {fileID: 0}
+  gerenciadorSala: {fileID: 0}
+  gerenciadorQuarto: {fileID: 0}
 --- !u!61 &8646763471454022615
 BoxCollider2D:
   m_ObjectHideFlags: 0
