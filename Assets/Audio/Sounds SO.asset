@@ -58,3 +58,8 @@ MonoBehaviour:
     mixer: {fileID: 24300002, guid: 2ed6532f4b4a8d34fbafea2c00bb8c48, type: 2}
     sounds:
     - {fileID: 8300000, guid: 90ce73a555cd23d4296e4f3cf2ac5164, type: 3}
+  - name: PONTUEI
+    volume: 1
+    mixer: {fileID: 24300002, guid: 2ed6532f4b4a8d34fbafea2c00bb8c48, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 34948f90348bfea439a26008ed6a4fbf, type: 3}

@@ -3,48 +3,43 @@ using UnityEngine;
 
 public class CatAttack : MonoBehaviour
 {
-    // Ponto do ataque, onde a área do ataque será verificada
-    public Transform attackPoint;
+    public Transform attackPoint;              // Ponto onde o ataque ocorre
+    public float attackRange = 0.5f;           // Alcance do ataque
+    public LayerMask attackLayer;              // Layer dos objetos que podem ser atacados
 
-    // Raio do ataque para detectar objetos dentro do alcance
-    public float attackRange = 0.5f;
+    private Animator animator;                 // Animator do gato
+    private CatMov catMov;                     // Script de movimentação do gato
 
-    // Layer que indica quais objetos podem ser atacados
-    public LayerMask attackLayer;
-
-    // Referência para o Animator do gato, para controlar animações
-    private Animator animator;
-
-    // Referência ao script que controla o movimento do gato
-    private CatMov catMov;
+    [Header("Efeitos Visuais dos Ataques")]
+    public GameObject efeitoArranhao;          // Prefab ou objeto da animação de arranhar (sem sprite do player)
+    public GameObject efeitoMordida;           // Prefab ou objeto da animação de mordida (sem sprite do player)
 
     void Start()
     {
-        // Busca os componentes Animator e CatMov no GameObject do gato
         animator = GetComponent<Animator>();
         catMov = GetComponent<CatMov>();
+
+        // Garante que os efeitos comecem desativados
+        if (efeitoArranhao) efeitoArranhao.SetActive(false);
+        if (efeitoMordida) efeitoMordida.SetActive(false);
     }
 
     void Update()
     {
-        // Só permite atacar se não estiver atacando no momento (para evitar ataques sobrepostos)
         if (!catMov.isAttacking)
         {
-            // Se apertar Z, inicia ataque "Arranhar"
             if (Input.GetKeyDown(KeyCode.Z))
             {
-                StartCoroutine(Attack("Arranhar"));
+                StartCoroutine(Attack("Arranhar", efeitoArranhao));
                 SoundManager.PlaySound(SoundType.ARRANHAO);
             }
 
-            // Se apertar X, inicia ataque "Morder"
             if (Input.GetKeyDown(KeyCode.X))
             {
-                StartCoroutine(Attack("Morder"));
+                StartCoroutine(Attack("Morder", efeitoMordida));
                 SoundManager.PlaySound(SoundType.MORDIDA);
             }
 
-            // Se apertar C, inicia ataque "Regar"
             if (Input.GetKeyDown(KeyCode.C))
             {
                 StartCoroutine(Regar());
@@ -53,61 +48,60 @@ public class CatAttack : MonoBehaviour
         }
     }
 
-    // Corrotina para os ataques "Arranhar" e "Morder"
-    IEnumerator Attack(string tipo)
+    // Corrotina para os ataques visuais + dano
+    IEnumerator Attack(string tipo, GameObject efeitoVisual)
     {
-        catMov.isAttacking = true;           // Bloqueia o movimento durante o ataque
-        animator.SetTrigger(tipo);           // Dispara a animação correspondente (Arranhar ou Morder)
+        catMov.isAttacking = true;
 
-        yield return new WaitForSeconds(0.1f);  // Pequeno delay para sincronizar o ataque com a animação
+        if (efeitoVisual != null)
+        {
+            efeitoVisual.SetActive(true); // Ativa o efeito visual
+            Animator anim = efeitoVisual.GetComponent<Animator>();
+            if (anim != null)
+            {
+                anim.Play(0); // Reinicia a animação
+            }
+        }
 
-        // Detecta todos os objetos no raio do ataque que pertencem à layer especificada
+        yield return new WaitForSeconds(0.1f); // Delay para sincronizar
+
         Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, attackLayer);
-
-        // Para cada objeto detectado, tenta chamar o método Destruir passando o tipo de ataque
         foreach (var obj in hits)
         {
             obj.GetComponent<ObjetoDestruivel>()?.Destruir(tipo);
-            // O '?' evita erros se o objeto não tiver o componente ObjetoDestruivel
         }
 
-        yield return new WaitForSeconds(0.9f);  // Tempo restante para completar a animação/ataque
+        yield return new WaitForSeconds(0.5f); // Duração da animação do ataque
 
-        catMov.isAttacking = false;          // Libera o movimento ao fim do ataque
+        if (efeitoVisual != null)
+            efeitoVisual.SetActive(false); // Esconde o efeito
+
+        catMov.isAttacking = false;
     }
 
-    // Corrotina para o ataque especial "Regar"
     IEnumerator Regar()
     {
-        catMov.isAttacking = true;           // Bloqueia movimento durante o ataque
-        animator.SetTrigger("Regando");      // Dispara a animação de regar
+        catMov.isAttacking = true;
+        animator.SetTrigger("Regando");
 
-        yield return new WaitForSeconds(0.1f);  // Delay para sincronizar o ataque
+        yield return new WaitForSeconds(0.1f);
 
-        // Detecta objetos no alcance para aplicar efeito do ataque regar
         Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, attackLayer);
-
-        // Para cada objeto detectado, chama o método Destruir com o tipo "Regando"
         foreach (var obj in hits)
         {
             obj.GetComponent<ObjetoDestruivel>()?.Destruir("Regando");
         }
 
-        yield return new WaitForSeconds(2.9f);  // Duração total da animação do regar (0.1 + 2.9 = 3 segundos)
+        yield return new WaitForSeconds(2.9f); // Regar é mais demorado
 
-        catMov.isAttacking = false;          // Libera o movimento após o ataque
+        catMov.isAttacking = false;
     }
 
-    // Método para desenhar gizmos na cena (apenas no editor)
     void OnDrawGizmosSelected()
     {
-        // Se não definiu o ponto de ataque, não desenha nada
         if (attackPoint == null) return;
 
-        // Cor vermelha para o gizmo do raio de ataque
         Gizmos.color = Color.red;
-
-        // Desenha um círculo no ponto de ataque com o raio definido
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
