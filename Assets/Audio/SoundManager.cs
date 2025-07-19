@@ -15,6 +15,7 @@ public enum SoundType
     MADEIRAQUEBRANDO,
     VIDROQUEBRANDO,
     TECIDORESGANDO,
+    PONTUEI,
 }
 
 [RequireComponent(typeof(AudioSource))]

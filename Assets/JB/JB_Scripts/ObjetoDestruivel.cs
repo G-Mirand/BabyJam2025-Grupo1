@@ -15,18 +15,18 @@ public class ObjetoDestruivel : MonoBehaviour
     public bool aceitaMorder = true;
     public bool aceitaRegar = true;
 
-    public int valorPontuacao = 10; // Pontos recebidos ao destruir
-
     private int contadorArranhar = 0;
     private int contadorMorder = 0;
     private int contadorRegar = 0;
 
     private bool foiDestruido = false;
-    private bool pontuado = false;
+    private bool pontuado = false; // garante que a pontuação só será dada uma vez
 
     private SpriteRenderer sr;
 
-    // Referências para os gerenciadores (só um será usado)
+    public int valorPontuacao = 10; // valor de pontos ao destruir
+
+    // Referências para os gerenciadores (um ou outro será usado)
     public GerenciadorDeObjetos gerenciadorSala;
     public GerenciadorDeObjetosQuarto gerenciadorQuarto;
 
@@ -39,6 +39,7 @@ public class ObjetoDestruivel : MonoBehaviour
     {
         if (foiDestruido) return;
 
+        // Verifica se aceita o tipo de golpe
         if ((tipo == "Arranhar" && !aceitaArranhar) ||
             (tipo == "Morder" && !aceitaMorder) ||
             (tipo == "Regando" && !aceitaRegar))
@@ -46,7 +47,7 @@ public class ObjetoDestruivel : MonoBehaviour
             return;
         }
 
-        StartCoroutine(Tremor(0.5f, 0.10f));
+        StartCoroutine(Tremor(0.5f, 0.10f)); // tremor visual
 
         switch (tipo)
         {
@@ -58,6 +59,7 @@ public class ObjetoDestruivel : MonoBehaviour
                     ChecarSom();
                     AdicionarPontuacao();
                     foiDestruido = true;
+                    AvisarGerenciador();
                 }
                 break;
 
@@ -69,6 +71,7 @@ public class ObjetoDestruivel : MonoBehaviour
                     ChecarSom();
                     AdicionarPontuacao();
                     foiDestruido = true;
+                    AvisarGerenciador();
                 }
                 break;
 
@@ -76,33 +79,14 @@ public class ObjetoDestruivel : MonoBehaviour
                 contadorRegar++;
                 if (contadorRegar >= golpesParaRegar && spriteRegado != null)
                 {
-                    sr.sprite = spriteRegado;
-                    ChecarSom();
-                    AdicionarPontuacao();
-                    foiDestruido = true;
+                    // Espera a animação de regar do player acabar (1s)
+                    StartCoroutine(AguardarAnimacaoRegar());
                 }
                 break;
         }
-
-        // Avisa o gerenciador correspondente
-        if (foiDestruido)
-        {
-            if (gerenciadorSala != null)
-                gerenciadorSala.AvisarObjetoDestruido(this);
-            else if (gerenciadorQuarto != null)
-                gerenciadorQuarto.AvisarObjetoDestruido(this);
-        }
     }
 
-    void AdicionarPontuacao()
-    {
-        if (!pontuado && JP_Pontuacao.instance != null)
-        {
-            JP_Pontuacao.instance.AdicionarPontos(valorPontuacao);
-            pontuado = true;
-        }
-    }
-
+    // Executa tremor visual
     IEnumerator Tremor(float duracao, float intensidade)
     {
         Vector3 posicaoOriginal = transform.localPosition;
@@ -114,7 +98,6 @@ public class ObjetoDestruivel : MonoBehaviour
             float offsetY = Random.Range(-1f, 1f) * intensidade;
 
             transform.localPosition = posicaoOriginal + new Vector3(offsetX, offsetY, 0f);
-
             tempo += Time.deltaTime;
             yield return null;
         }
@@ -122,19 +105,52 @@ public class ObjetoDestruivel : MonoBehaviour
         transform.localPosition = posicaoOriginal;
     }
 
+    // Aguarda um tempo antes de aplicar a destruição "regado"
+    IEnumerator AguardarAnimacaoRegar()
+    {
+        yield return new WaitForSeconds(2.9f); // tempo da animação do player regando
+
+        sr.sprite = spriteRegado;
+        ChecarSom();
+        AdicionarPontuacao();
+        foiDestruido = true;
+        AvisarGerenciador();
+    }
+
+    // Envia som baseado na tag do objeto
     void ChecarSom()
     {
-        if (CompareTag("Vidro"))
+        if (gameObject.CompareTag("Vidro"))
         {
             SoundManager.PlaySound(SoundType.VIDROQUEBRANDO);
         }
-        else if (CompareTag("Madeira"))
+        else if (gameObject.CompareTag("Madeira"))
         {
             SoundManager.PlaySound(SoundType.MADEIRAQUEBRANDO);
         }
-        else if (CompareTag("Tecido"))
+        else if (gameObject.CompareTag("Tecido"))
         {
             SoundManager.PlaySound(SoundType.TECIDORESGANDO);
         }
+    }
+
+    // Adiciona pontuação uma única vez
+    void AdicionarPontuacao()
+    {
+        if (!pontuado)
+        {
+            JP_Pontuacao.instance.AdicionarPontos(valorPontuacao);
+            SoundManager.PlaySound(SoundType.PONTUEI); // Som de pontuação
+            pontuado = true;
+        }
+    }
+
+    // Avisa o gerenciador correto da destruição
+    void AvisarGerenciador()
+    {
+        if (gerenciadorSala != null)
+            gerenciadorSala.AvisarObjetoDestruido(this);
+        else if (gerenciadorQuarto != null)
+            gerenciadorQuarto.AvisarObjetoDestruido(this);
     }
 }
