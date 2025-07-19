@@ -5,8 +5,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 
 public enum SoundType
-{   
-    //Os tipo de som no jogo
+{
     MUSICATRANQUILA,
     PREVIEWMUSICA,
     MUSICAROCK,
@@ -21,14 +20,13 @@ public enum SoundType
 [RequireComponent(typeof(AudioSource))]
 public class SoundManager : MonoBehaviour
 {
-        
-        [SerializeField] private SoundsSO SO;
-        public static SoundManager instance = null;
-        private AudioSource audioSource;
+    [SerializeField] private SoundsSO SO;
+    public static SoundManager instance = null;
+    private AudioSource audioSource;
+    private AudioSource musicaAtual;
 
     private void Awake()
-        {
-
+    {
         if (instance == null)
         {
             instance = this;
@@ -40,27 +38,61 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public static void PlaySound(SoundType sound, AudioSource source = null, float volume = 1)
-        {
-            SoundList soundList = instance.SO.sounds[(int)sound];
-            AudioClip[] clips = soundList.sounds;
-            AudioClip randomClip = clips[UnityEngine.Random.Range(0, clips.Length)];
 
-            if (source)
-            {
-                source.outputAudioMixerGroup = soundList.mixer;
-                source.clip = randomClip;
-                source.volume = volume * soundList.volume;
-                source.Play();
-            }
-            else
-            {
-                instance.audioSource.outputAudioMixerGroup = soundList.mixer;
-                instance.audioSource.PlayOneShot(randomClip, volume * soundList.volume);
-            }
+    public static void PlaySound(SoundType sound, AudioSource source = null, float volume = 1)
+    {
+        SoundList soundList = instance.SO.sounds[(int)sound];
+        AudioClip[] clips = soundList.sounds;
+        AudioClip randomClip = clips[UnityEngine.Random.Range(0, clips.Length)];
+
+        if (source)
+        {
+            source.outputAudioMixerGroup = soundList.mixer;
+            source.clip = randomClip;
+            source.volume = volume * soundList.volume;
+            source.Play();
+        }
+        else
+        {
+            instance.audioSource.outputAudioMixerGroup = soundList.mixer;
+            instance.audioSource.PlayOneShot(randomClip, volume * soundList.volume);
         }
     }
 
+    public static void PlayMusic(SoundType sound)
+    {
+        AudioClip clip = instance.GetRandomClip(sound);
+        if (clip == null) return;
+
+        if (instance.musicaAtual == null)
+        {
+            instance.musicaAtual = instance.gameObject.AddComponent<AudioSource>();
+            instance.musicaAtual.loop = true;
+        }
+
+        SoundList soundList = instance.SO.sounds[(int)sound];
+
+        instance.musicaAtual.clip = clip;
+        instance.musicaAtual.outputAudioMixerGroup = soundList.mixer;
+        instance.musicaAtual.volume = soundList.volume;
+        instance.musicaAtual.Play();
+    }
+
+    public static void StopMusic()
+    {
+        if (instance.musicaAtual != null)
+        {
+            instance.musicaAtual.Stop();
+        }
+    }
+
+    private AudioClip GetRandomClip(SoundType sound)
+    {
+        SoundList soundList = SO.sounds[(int)sound];
+        if (soundList.sounds.Length == 0) return null;
+        return soundList.sounds[UnityEngine.Random.Range(0, soundList.sounds.Length)];
+    }
+}
 
 [Serializable]
 public struct SoundList
@@ -70,8 +102,6 @@ public struct SoundList
     public AudioMixerGroup mixer;
     public AudioClip[] sounds;
 }
-
-
 
 #if UNITY_EDITOR
 [CustomEditor(typeof(SoundsSO))]
@@ -85,7 +115,7 @@ public class SoundsSOEditor : Editor
             return;
 
         string[] names = Enum.GetNames(typeof(SoundType));
-         bool differentSize = names.Length != soundList.Length;
+        bool differentSize = names.Length != soundList.Length;
 
         Dictionary<string, SoundList> sounds = new();
 
@@ -125,6 +155,3 @@ public class SoundsSOEditor : Editor
     }
 }
 #endif
-
-    
-
