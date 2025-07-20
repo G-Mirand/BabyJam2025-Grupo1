@@ -77,12 +77,14 @@ public class ObjetoDestruivel : MonoBehaviour
 
             case "Regando":
                 contadorRegar++;
-                if (contadorRegar >= golpesParaRegar && spriteRegado != null)
+
+                // Garante que não chama a corrotina mais de uma vez
+                if (!foiDestruido && contadorRegar >= golpesParaRegar && spriteRegado != null)
                 {
-                    // Espera a animação de regar do player acabar (1s)
+                    foiDestruido = true; // Marca como destruído antes de esperar
                     StartCoroutine(AguardarAnimacaoRegar());
                 }
-                break;
+    break;
         }
     }
 
