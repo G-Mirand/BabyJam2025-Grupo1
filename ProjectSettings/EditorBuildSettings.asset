@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/JB/Scenes/Menu.unity
     guid: 2c0b398a80097f34db17806fd2137b9f
   - enabled: 1
-    path: Assets/Scenes/PuppyHavocGame.unity
+    path: Assets/JB/Scenes/PuppyHavocGame.unity
     guid: 81a2454dc6ee4724aa5df66f98caccc3
   - enabled: 1
-    path: Assets/Scenes/GameOver.unity
+    path: Assets/JB/Scenes/GameOver.unity
     guid: 42dc4877b952c9b4996b90120cab39a8
   - enabled: 1
-    path: Assets/Scenes/Congratulations.unity
+    path: Assets/JB/Scenes/Congratulations.unity
     guid: d3552243f68b712428bc22c970c31b0b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
